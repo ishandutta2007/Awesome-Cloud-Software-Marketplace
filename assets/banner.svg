@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070a12" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    
+    <linearGradient id="accent-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="glow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#e0e7ff" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1" opacity="0.4" />
+    </pattern>
+
+    <!-- Filters for Glow -->
+    <filter id="blur-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+    </filter>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Styles for Dynamic CSS Animations -->
+  <style>
+    @keyframes pulse-slow {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.05); }
+    }
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(1deg); }
+    }
+    @keyframes float-reverse {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(12px) rotate(-1.5deg); }
+    }
+    @keyframes dash-flow {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes orbit-particle {
+      0% { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+      100% { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+    }
+    @keyframes wave-motion {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(-40px); }
+      100% { transform: translateX(0); }
+    }
+
+    .bg-glow-1 { animation: pulse-slow 8s ease-in-out infinite; transform-origin: 200px 100px; }
+    .bg-glow-2 { animation: pulse-slow 10s ease-in-out infinite 2s; transform-origin: 1000px 250px; }
+    .floating-element-1 { animation: float-slow 6s ease-in-out infinite; }
+    .floating-element-2 { animation: float-reverse 7s ease-in-out infinite; }
+    .flow-line { stroke-dasharray: 8, 8; animation: dash-flow 20s linear infinite; }
+    .wave-path { animation: wave-motion 12s ease-in-out infinite; }
+  </style>
+
+  <!-- 1. Base Background -->
+  <rect width="1200" height="350" rx="16" fill="url(#bg-grad)" />
+
+  <!-- 2. Grid Overlay -->
+  <rect width="1200" height="350" rx="16" fill="url(#grid)" />
+
+  <!-- 3. Dynamic Background Ambient Glows (Behind Everything) -->
+  <circle cx="200" cy="80" r="180" fill="#06b6d4" filter="url(#blur-glow)" class="bg-glow-1" />
+  <circle cx="1000" cy="270" r="200" fill="#8b5cf6" filter="url(#blur-glow)" class="bg-glow-2" />
+  <circle cx="600" cy="175" r="150" fill="#3b82f6" opacity="0.15" filter="url(#blur-glow)" />
+
+  <!-- 4. Dynamic Animated Background Flow/Tech Lines (Behind Foreground Cards & Text) -->
+  <g opacity="0.3" class="wave-path">
+    <path d="M-100,280 C200,320 400,220 700,270 C1000,320 1100,220 1300,260" fill="none" stroke="url(#accent-cyan)" stroke-width="2" />
+    <path d="M-100,295 C200,335 400,235 700,285 C1000,335 1100,235 1300,275" fill="none" stroke="url(#accent-purple)" stroke-width="1.5" class="flow-line" />
+  </g>
+
+  <!-- 5. Decorative Background Elements - Left & Right Flanks (Z-Index: Background) -->
+  <!-- Left Side: Cloud & Ecosystem Node Illustration -->
+  <g transform="translate(60, 60)" class="floating-element-1" opacity="0.75">
+    <rect x="0" y="0" width="180" height="220" rx="12" fill="url(#card-grad)" stroke="#334155" stroke-width="1" filter="url(#soft-shadow)" />
+    <!-- Mini App Cards Grid in Decorative Panel -->
+    <rect x="18" y="24" width="40" height="40" rx="8" fill="#06b6d4" opacity="0.2" />
+    <path d="M30 38 L46 38 M38 30 L38 46" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round" />
+    
+    <rect x="70" y="24" width="40" height="40" rx="8" fill="#8b5cf6" opacity="0.2" />
+    <circle cx="90" cy="44" r="8" fill="none" stroke="#8b5cf6" stroke-width="2.5" />
+
+    <rect x="122" y="24" width="40" height="40" rx="8" fill="#ec4899" opacity="0.2" />
+    <path d="M134 48 L142 36 L150 48" fill="none" stroke="#ec4899" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+    <rect x="18" y="80" width="144" height="12" rx="4" fill="#334155" opacity="0.6" />
+    <rect x="18" y="100" width="100" height="10" rx="4" fill="#1e293b" />
+    
+    <!-- Mini Stats Graphic inside Left Panel -->
+    <rect x="18" y="124" width="144" height="72" rx="8" fill="#0f172a" stroke="#1e293b" />
+    <path d="M28 175 L55 155 L85 165 L115 140 L148 150" fill="none" stroke="url(#accent-cyan)" stroke-width="2.5" stroke-linecap="round" />
+    <circle cx="148" cy="150" r="3.5" fill="#38bdf8" />
+  </g>
+
+  <!-- Right Side: Cloud Software Architecture / Marketplace Node Graphic -->
+  <g transform="translate(960, 55)" class="floating-element-2" opacity="0.75">
+    <rect x="0" y="0" width="180" height="230" rx="12" fill="url(#card-grad)" stroke="#334155" stroke-width="1" filter="url(#soft-shadow)" />
+    <!-- Header of mini card -->
+    <rect x="16" y="18" width="148" height="28" rx="6" fill="#1e293b" />
+    <circle cx="30" cy="32" r="4" fill="#ef4444" />
+    <circle cx="42" cy="32" r="4" fill="#eab308" />
+    <circle cx="54" cy="32" r="4" fill="#22c55e" />
+    <!-- Cloud Node Connections -->
+    <g transform="translate(24, 60)">
+      <!-- Cloud Icon SVG Path -->
+      <path d="M45 40 C45 31.7 51.7 25 60 25 C66.8 25 72.4 29.5 74.2 35.8 C76.1 34.7 78.3 34 80.7 34 C87.3 34 92.7 39.4 92.7 46 C92.7 46.6 92.6 47.3 92.5 47.9 C96.9 49.3 100 53.4 100 58.3 C100 64.7 94.7 70 88.3 70 L46.7 70 C39.7 70 34 64.3 34 57.3 C34 51.1 38.5 46 44.5 44.8 C44.8 43.2 45 41.6 45 40 Z" fill="url(#accent-cyan)" opacity="0.25" />
+      <path d="M45 40 C45 31.7 51.7 25 60 25 C66.8 25 72.4 29.5 74.2 35.8 C76.1 34.7 78.3 34 80.7 34 C87.3 34 92.7 39.4 92.7 46 C92.7 46.6 92.6 47.3 92.5 47.9 C96.9 49.3 100 53.4 100 58.3 C100 64.7 94.7 70 88.3 70 L46.7 70 C39.7 70 34 64.3 34 57.3 C34 51.1 38.5 46 44.5 44.8 C44.8 43.2 45 41.6 45 40 Z" fill="none" stroke="#38bdf8" stroke-width="2" />
+      
+      <!-- Marketplace Flow indicators -->
+      <rect x="0" y="90" width="132" height="10" rx="5" fill="#1e293b" />
+      <rect x="0" y="90" width="85" height="10" rx="5" fill="url(#accent-cyan)" />
+      <rect x="0" y="110" width="132" height="10" rx="5" fill="#1e293b" />
+      <rect x="0" y="110" width="110" height="10" rx="5" fill="url(#accent-purple)" />
+      <rect x="0" y="130" width="132" height="10" rx="5" fill="#1e293b" />
+      <rect x="0" y="130" width="60" height="10" rx="5" fill="#ec4899" />
+    </g>
+  </g>
+
+  <!-- 6. Foreground Title & Subtitle Layer (HIGHEST Z-INDEX & GUARANTEED CLEAR READABILITY) -->
+  <g transform="translate(600, 160)" text-anchor="middle">
+    <!-- Semi-transparent dark backing card behind text for ultimate contrast & zero occlusion -->
+    <rect x="-370" y="-110" width="740" height="210" rx="20" fill="#0b0f19" fill-opacity="0.75" stroke="#1e293b" stroke-width="1.5" filter="url(#soft-shadow)" />
+
+    <!-- Top Badge / Pill -->
+    <g transform="translate(0, -72)">
+      <rect x="-140" y="-15" width="280" height="30" rx="15" fill="url(#card-grad)" stroke="#3b82f6" stroke-width="1" />
+      <text x="0" y="4" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" text-anchor="middle">
+        ☁️ CLOUD MARKETPLACE DIRECTORY
+      </text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="-12" fill="url(#text-grad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.5" filter="url(#soft-shadow)">
+      Awesome Cloud Software Marketplace
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="24" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="0.2">
+      Curated Commercial &amp; Open-Source Cloud Marketplaces, App Stores &amp; SaaS Platforms
+    </text>
+
+    <!-- Feature Tags Row -->
+    <g transform="translate(0, 65)">
+      <!-- Tag 1 -->
+      <g transform="translate(-190, 0)">
+        <rect x="-65" y="-13" width="130" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="0" y="4" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">AWS / Azure / GCP</text>
+      </g>
+      <!-- Tag 2 -->
+      <g transform="translate(-60, 0)">
+        <rect x="-55" y="-13" width="110" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="0" y="4" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">SaaS Billing</text>
+      </g>
+      <!-- Tag 3 -->
+      <g transform="translate(65, 0)">
+        <rect x="-60" y="-13" width="120" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="0" y="4" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">Open-Source</text>
+      </g>
+      <!-- Tag 4 -->
+      <g transform="translate(190, 0)">
+        <rect x="-55" y="-13" width="110" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="0" y="4" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">Governance</text>
+      </g>
+    </g>
+  </g>
+</svg>
