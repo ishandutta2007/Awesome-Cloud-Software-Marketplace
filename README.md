@@ -1,31 +1,20 @@
-# Awesome-Cloud-Software-Marketplace
-
 # Awesome-Cloud-Software-Marketplace 🏪 ☁️
 
 
 
 <p align="center">
-
   <img src="assets/banner.svg" alt="Awesome Cloud Software Marketplace Banner" width="100%">
-
 </p>
 
 
 
 <p align="center">
-
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
-
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-
   <a href="https://github.com/ishandutta2007/Awesome-Cloud-Software-Marketplace"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-Software-Marketplace?style=social" alt="GitHub_Stars"/></a>
-
   <a href="https://github.com/ishandutta2007/Awesome-Cloud-Software-Marketplace/fork"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Cloud-Software-Marketplace?style=social" alt="GitHub Forks"/></a>
-
   <a href="https://github.com/ishandutta2007/Awesome-Cloud-Software-Marketplace/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Cloud-Software-Marketplace?color=blue" alt="License"/></a>
-
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
-
 </p>
 
 
@@ -75,15 +64,10 @@ Welcome to the ultimate curated directory of **cloud software marketplaces**, **
 ## 📑 Table of Contents
 
 - [🏢 SaaS & Commercial Platforms](#-saas--commercial-platforms)
-
 - [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
-
 - [🛠️ How to Contribute](#%EF%B8%8F-how-to-contribute)
-
 - [📊 Star History](#-star-history)
-
 - [🤝 Support & Sponsorship](#-support--sponsorship)
-
 - [⚠️ Disclaimer](#%EF%B8%8F-disclaimer)
 
 
@@ -101,27 +85,16 @@ The cloud software marketplace market spans **hyperscaler marketplaces** (AWS, M
 
 
 | SaaS / Commercial Platform | Company / Owner | Valuation / Market Cap | Standard Edition Starting Price | Free Tier / Free Trial Limits | Description |
-
 | :--- | :--- | :--- | :--- | :--- | :--- |
-
 | **[AWS Marketplace](https://aws.amazon.com/marketplace/)** ☁️ | Amazon | ~$2.0 Trillion | **Pay-as-you-go** with consolidated AWS billing | **Free tier for AWS services** | **AWS-native software marketplace** — **Consolidated billing** on AWS invoices . **Private Marketplaces** for organizational procurement controls. **SaaS, AMI, container, and professional services** listings. **AWS Marketplace Metering Service** for usage-based pricing . |
-
 | **[Microsoft Commercial Marketplace](https://azuremarketplace.microsoft.com/)** 🔷 | Microsoft | ~$3.90 Trillion | **Transactable offers** with Azure billing integration | **Azure benefit eligibility** for MACC commitments | **Microsoft ecosystem marketplace** — **Azure benefit eligibility** for MACC consumption . **15% reduction** on standard marketplace fees for **IP Co-sell eligible** partners . **SaaS, VM, container, and Dynamics 365** offers. |
-
 | **[Google Cloud Marketplace](https://cloud.google.com/marketplace)** 🌐 | Google (Alphabet) | ~$2.0 Trillion | **Pay-as-you-go** with GCP billing integration | **$300 free credits** for new customers | **GCP-native marketplace** — **Consolidated billing** on GCP invoices. **Private Marketplace** for procurement controls. **SaaS, VM, and Kubernetes** applications. **Procurement API** for automated purchasing . |
-
 | **[Red Hat Marketplace](https://marketplace.redhat.com/)** 🎩 | Red Hat (IBM) | ~$200 Billion (IBM) | **Subscription-based** with OpenShift integration | **Free trial available** | **Enterprise software marketplace** — **Certified software for OpenShift** . **Operator-based deployment** for Kubernetes-native applications. **Automated billing** through Red Hat subscriptions . |
-
 | **[Snowflake Marketplace](https://www.snowflake.com/marketplace/)** ❄️ | Snowflake | ~$50 Billion | **Usage-based** integrated with Snowflake billing | **Free listings available** | **Data and application marketplace** — **Share data without movement** — consumers access provider data directly in their Snowflake account . **Paid listings with per-query pricing**. **Native apps** for application distribution. **Provider and consumer profiles** for governance . |
-
 | **[Salesforce AppExchange](https://appexchange.salesforce.com/)** ☁️ | Salesforce | ~$250 Billion | **Subscription-based** with Salesforce billing | **Free trial available** | **Salesforce ecosystem marketplace** — **4,000+ apps** for CRM, sales, service, and marketing . **Security review required** for listing. **Checkout and billing integration** with Salesforce . |
-
 | **[HubSpot App Marketplace](https://ecosystem.hubspot.com/marketplace/apps)** 🟠 | HubSpot | ~$30 Billion | **Subscription-based** with HubSpot billing | **Free apps available** | **HubSpot ecosystem marketplace** — **1,500+ integrations** for marketing, sales, and service . **OAuth-based authentication**. **App listing requirements** for quality and security . |
-
 | **[Atlassian Marketplace](https://marketplace.atlassian.com/)** 🔵 | Atlassian | ~$50 Billion | **Subscription-based** with Atlassian billing | **Free apps available** | **Atlassian ecosystem marketplace** — **5,000+ apps** for Jira, Confluence, and Bitbucket . **Cloud, Data Center, and Server** deployment options. **Automated billing** through Atlassian subscriptions . |
-
 | **[ServiceNow Store](https://store.servicenow.com/)** 🟢 | ServiceNow | ~$150 Billion | **Subscription-based** with ServiceNow billing | **Free apps available** | **ServiceNow ecosystem marketplace** — **Certified and uncertified apps** for ITSM, ITOM, and HR . **Flow Designer integration**. **ServiceNow billing integration** for seamless procurement . |
-
 | **[Docker Hub](https://hub.docker.com/)** 🐳 | Docker Inc. | Private | **Free for public repos**; **Pro: $9/month**; **Team: $15/user/month** | **Free: 1 private repo, 200 pulls/6 hours** | **Container image registry and marketplace** — **15M+ container images** . **Official Images and Verified Publisher** programs . **Automated builds and webhooks**. **The default registry for Docker and Kubernetes** . |
 
 
